@@ -101,16 +101,26 @@ document.addEventListener('DOMContentLoaded', function () {
    * with class `.modal-close` to close them. To open a modal, attach
    * `data-modal-target="#modalId"` to any trigger element.
    */
+  let currentModal = null;
   function openModal(modal) {
     if (modal) {
       modal.classList.add('open');
       modal.addEventListener('click', outsideClickListener);
+      document.addEventListener('keydown', escCloseListener);
+      currentModal = modal;
     }
   }
   function closeModal(modal) {
     if (modal) {
       modal.classList.remove('open');
       modal.removeEventListener('click', outsideClickListener);
+      document.removeEventListener('keydown', escCloseListener);
+      currentModal = null;
+    }
+  }
+  function escCloseListener(e) {
+    if (e.key === 'Escape' && currentModal) {
+      closeModal(currentModal);
     }
   }
   function outsideClickListener(e) {
