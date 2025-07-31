@@ -559,6 +559,8 @@ input:checked + .slider:before {
     width: 95%;
     max-width: 90%;
     padding: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
   }
   .modal-content input,
   .modal-content textarea {
@@ -1090,6 +1092,8 @@ footer {
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -1121,12 +1125,15 @@ footer {
 
 /* Style for modal close button (the × icon) */
 .modal-content .modal-close {
-  position: absolute;
+  position: sticky;
   top: 0.5rem;
   right: 1rem;
+  float: right;
   font-size: 1.5rem;
   cursor: pointer;
   color: #6e4941;
+  z-index: 1;
+
 }
 
 /* Privacy Policy modal specific styling */
