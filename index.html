@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoFresh Packaging</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="SoFresh Packaging - บรรจุภัณฑ์พร้อมใช้ สั่งง่ายได้เร็ว">
+  <meta name="description" content="บริการแพ็กเกจจิ้งครบวงจร ขั้นต่ำเริ่มน้อย ตอบโจทย์ทุกแบรนด์ ของดีใครก็ทำได้ แต่ของที่ขายได้ ต้อง SoFresh Packaging">
+
+  <!-- Open Graph / Facebook / LINE -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://packaging.sofresh.site">
+  <meta property="og:title" content="SoFresh Packaging - บรรจุภัณฑ์พร้อมใช้ สั่งง่ายได้เร็ว">
+  <meta property="og:description" content="บริการแพ็กเกจจิ้งครบวงจร ขั้นต่ำเริ่มน้อย ตอบโจทย์ทุกแบรนด์ ของดีใครก็ทำได้ แต่ของที่ขายได้ ต้อง SoFresh Packaging">
+  <meta property="og:image" content="https://packaging.sofresh.site/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://packaging.sofresh.site">
+  <meta name="twitter:title" content="SoFresh Packaging - บรรจุภัณฑ์พร้อมใช้ สั่งง่ายได้เร็ว">
+  <meta name="twitter:description" content="บริการแพ็กเกจจิ้งครบวงจร ขั้นต่ำเริ่มน้อย ตอบโจทย์ทุกแบรนด์ ของดีใครก็ทำได้ แต่ของที่ขายได้ ต้อง SoFresh Packaging">
+  <meta name="twitter:image" content="https://packaging.sofresh.site/preview.png">
+
+  <!-- SEO Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-o4spU5Fl9D2zpfcZRnECV2vjxhSwmVriwbUDJkN0oSyCSj3JVgFwq+XCbRw6k5Jwz0afEbGx5T6EdlaN0Z7u1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7.5.0/fonts/LINESeedSansTH/LINESeedSansTH.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Favicon.png">
+</head>
+
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Use the full SoFresh Packaging logo instead of the favicon in the header -->
+        <img src="header-logo.png" alt="SoFresh Packaging Logo">
+      </div>
+      <!-- Mobile nav toggle (hamburger) -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navigation links container -->
+      <ul class="nav-links" id="navmenu">
+        <li><a href="#home"><span class="lang-en">Home</span><span class="lang-th">หน้าแรก</span></a></li>
+        <li><a href="#about"><span class="lang-en">About</span><span class="lang-th">เกี่ยวกับเรา</span></a></li>
+        <li><a href="#why"><span class="lang-en">Why SoFresh</span><span class="lang-th">ทำไมต้อง SoFresh</span></a></li>
+        <li><a href="#services"><span class="lang-en">Services</span><span class="lang-th">บริการของเรา</span></a></li>
+        <li><a href="#cta"><span class="lang-en">Contact</span><span class="lang-th">ติดต่อเรา</span></a></li>
+      </ul>
+      <!-- Language toggle switch -->
+      <div class="lang-toggle">
+        <!-- TH label -->
+        <span class="lang-label">TH</span>
+        <label class="switch">
+          <input type="checkbox" id="lang-toggle" aria-label="Language toggle">
+          <span class="slider round"></span>
+        </label>
+        <!-- EN label -->
+        <span class="lang-label">EN</span>
+      </div>
+      <!-- Order button triggers the inquiry modal -->
+      <a href="#" class="order-btn" data-modal-target="#contactForm" data-no-smooth><span class="lang-en">Order&nbsp;Now!</span><span class="lang-th">สั่งซื้อเลย!</span></a>
+    </nav>
+    <!-- Hero section -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <!-- Left side: text content -->
+        <div class="hero-text">
+          <h1>SoFresh Packaging</h1>
+          <p>
+            <span class="lang-en">We take care of your packaging — professionally, flexibly, and safely</span>
+            <span class="lang-th">เราดูแลบรรจุภัณฑ์ของคุณอย่างมืออาชีพ ตรงตามความต้องการ และ ปลอดภัยในทุกขั้นตอน</span>
+          </p>
+          <button class="cta-btn" data-modal-target="#contactForm"><span class="lang-en">Send Inquiry</span><span class="lang-th">ขอใบเสนอราคา</span></button>
+        </div>
+        <!-- Right side: product image -->
+        <div class="hero-image">
+          <img src="hero-image.png" alt="Packaging products on shelves">
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2><span class="lang-en">About Us</span><span class="lang-th">เกี่ยวกับเรา</span></h2>
+      <div class="about-container">
+        <!-- Left: about image -->
+        <div class="about-image">
+          <img src="about-image.png" alt="Packaging products">
+        </div>
+        <!-- Right: about text -->
+        <div class="about-text">
+          <p class="lang-en">SoFresh Packaging is packaging wholesaler &amp; solution provider who helps young brand owners turn ideas into reality with guaranteed high-quality packaging at lower MOQ (minimum order quantity) together with premium service and quality control.</p>
+          <p class="lang-en">We specialize in supporting startup, SME, and emerging beauty brands who want professional packaging with zero pressure on high number of MOQ.</p>
+          <p class="lang-th">SoFresh Packaging คือผู้จัดจำหน่ายและให้บริการโซลูชันด้านบรรจุภัณฑ์แบบครบวงจร ที่พร้อมช่วยเจ้าของแบรนด์รุ่นใหม่เปลี่ยนไอเดียให้เป็นจริง ด้วยบรรจุภัณฑ์คุณภาพสูงในจำนวนสั่งผลิตขั้นต่ำที่เข้าถึงได้ พร้อมบริการระดับพรีเมียมและการควบคุมคุณภาพที่ไว้ใจได้</p>
+          <p class="lang-th">เรามีความเชี่ยวชาญในการดูแล สตาร์ทอัพ ธุรกิจขนาดเล็ก รวมไปถึงแบรนด์ที่เกี่ยวกับผลิตภัณฑ์ความงาม ที่ต้องการบรรจุภัณฑ์คุณภาพแบบมืออาชีพ โดยไม่ต้องกังวลกับการสั่งผลิตขั้นต่ำในจำนวนที่สูง</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Why SoFresh Section -->
+    <section class="why" id="why">
+      <h2><span class="lang-en">Why SoFresh</span><span class="lang-th">ทำไมต้อง SoFresh</span></h2>
+      <div class="why-container">
+        <!-- Left: illustration image -->
+        <div class="why-image">
+          <img src="why-image.png" alt="Customer service illustration">
+        </div>
+        <!-- Right: list of benefits -->
+        <div class="why-text">
+          <div class="why-item">
+            <h3><span class="lang-en">Lower MOQ, Easier Start</span><span class="lang-th">MOQ ต่ำ</span></h3>
+            <p><span class="lang-en">Start at just 5,000 pieces</span><span class="lang-th">เริ่มต้นที่ 5,000 ชิ้น</span></p>
+          </div>
+          <div class="why-item">
+            <h3><span class="lang-en">Professional Prototype Process</span><span class="lang-th">ขั้นตอนการขึ้นแบบมืออาชีพ</span></h3>
+            <p><span class="lang-en">Provide 2D &amp; 3D mock‑ups with sample prototype before mass production</span><span class="lang-th">ตั้งแต่ขึ้นแบบ 2D/3D พร้อมตัวอย่างก่อนสั่งผลิตจริง</span></p>
+          </div>
+          <div class="why-item">
+            <h3><span class="lang-en">Experienced Partner</span><span class="lang-th">พาร์ทเนอร์ประสบการณ์สูง</span></h3>
+            <p><span class="lang-en">Direct joint venture with international factory with strong supply chain</span><span class="lang-th">มีพาร์ทเนอร์ระดับนานาชาติ และซัพพลายเชนที่แข็งแรง</span></p>
+          </div>
+          <div class="why-item">
+            <h3><span class="lang-en">Double QC</span><span class="lang-th">ควบคุมคุณภาพ 2 ชั้น</span></h3>
+            <p><span class="lang-en">QC before shipment from factory and before final delivery</span><span class="lang-th">ตรวจสอบคุณภาพถึงสองครั้งก่อนส่ง</span></p>
+          </div>
+          <div class="why-item">
+            <h3><span class="lang-en">Full Service Support</span><span class="lang-th">บริการครบวงจร</span></h3>
+            <p><span class="lang-en">Personal consultation from start until end process, with artwork development (2D/3D)</span><span class="lang-th">ให้คำปรึกษาส่วนบุคคลตั้งแต่เริ่มจนจบ พร้อมดูแลงานศิลป์ (2D/3D)</span></p>
+          </div>
+          <div class="why-item">
+            <h3><span class="lang-en">Local Client Service</span><span class="lang-th">ทีมลูกค้าสัมพันธ์ภายในประเทศ</span></h3>
+            <p><span class="lang-en">Fast response, easy communication and transparency on the whole process</span><span class="lang-th">คุยง่าย ตอบไว และโปร่งใสตลอดกระบวนการ</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Section (relocated) -->
+    <section class="services" id="services">
+      <h2><span class="lang-en">Our Services</span><span class="lang-th">บริการของเรา</span></h2>
+      <div class="services-container">
+        <div class="service-row">
+          <!-- Packaging Development -->
+          <div class="service-item">
+            <div class="service-icon"><img src="service-packaging.png" alt="Packaging development icon"></div>
+            <div class="service-content">
+              <h3><span class="lang-en">Packaging Development</span><span class="lang-th">การพัฒนาบรรจุภัณฑ์</span></h3>
+              <ul>
+                <li><span class="lang-en">MOQ 5,000 pcs</span><span class="lang-th">MOQ 5,000 ชิ้น</span></li>
+                <li><span class="lang-en">2D, 3D mock‑up</span><span class="lang-th">แบบจำลอง 2D, 3D</span></li>
+                <li><span class="lang-en">Physical Samples</span><span class="lang-th">ตัวอย่างจริง</span></li>
+                <li><span class="lang-en">Double Quality Checking</span><span class="lang-th">ตรวจสอบคุณภาพสองครั้ง</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- One‑Stop Management -->
+          <div class="service-item">
+            <div class="service-icon"><img src="service-management.png" alt="One-stop management icon"></div>
+            <div class="service-content">
+              <h3><span class="lang-en">One‑Stop Management</span><span class="lang-th">การบริหารจัดการครบวงจร</span></h3>
+              <ul>
+                <li><span class="lang-en">Full service from consultation to delivery</span><span class="lang-th">ให้บริการครบตั้งแต่ปรึกษาถึงส่งมอบ</span></li>
+                <li><span class="lang-en">Transparent payment</span><span class="lang-th">การชำระเงินโปร่งใส</span></li>
+                <li><span class="lang-en">Professional project timeline control</span><span class="lang-th">ควบคุมเวลาโครงการอย่างมืออาชีพ</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="service-row">
+          <!-- Branding & Marketing Support -->
+          <div class="service-item full-width">
+            <div class="service-icon"><img src="service-marketing.png" alt="Branding and marketing icon"></div>
+            <div class="service-content">
+              <h3>
+                <span class="lang-en">Branding &amp; Marketing Support <span class="small">(Additional Service)</span></span>
+                <span class="lang-th">บริการเสริมด้านแบรนด์และการตลาด</span>
+              </h3>
+              <ul>
+                <li><span class="lang-en">Logo Design with Brand Guidelines</span><span class="lang-th">ออกแบบโลโก้พร้อมคู่มือแบรนด์</span></li>
+                <li><span class="lang-en">Content creation: TikTok / Facebook / IG videos &amp; photos</span><span class="lang-th">สร้างคอนเทนต์: วิดีโอ &amp; รูปภาพลง TikTok / Facebook / IG</span></li>
+                <li><span class="lang-en">Product photoshoot service (studio, flatlay, lifestyle)</span><span class="lang-th">บริการถ่ายภาพสินค้า (สตูดิโอ แบนราบ ไลฟ์สไตล์)</span></li>
+                <li><span class="lang-en">Ad campaign setup: TikTok Ads, Meta Ads</span><span class="lang-th">ตั้งค่าแคมเปญโฆษณา: TikTok Ads, Meta Ads</span></li>
+                <li><span class="lang-en">Shopee / Lazada shop setup</span><span class="lang-th">ตั้งร้านใน Shopee / Lazada</span></li>
+                <li><span class="lang-en">Influencer (KOL/Micro‑KOL) coordination</span><span class="lang-th">ประสานงานอินฟลูเอนเซอร์ (KOL/Micro-KOL)</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+      <h2><span class="lang-en">Our Process</span><span class="lang-th">ขั้นตอนการสั่งผลิต</span></h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="circle">1</div>
+          <h4><span class="lang-en">Consult</span><span class="lang-th">ปรึกษา</span></h4>
+          <p><span class="lang-en">Tell us your packaging requirements</span><span class="lang-th">แจ้งความต้องการบรรจุภัณฑ์ของคุณ</span></p>
+        </div>
+        <div class="step">
+          <div class="circle">2</div>
+          <h4><span class="lang-en">Design</span><span class="lang-th">ออกแบบ</span></h4>
+          <p><span class="lang-en">We create 2D/3D mockups and provide samples</span><span class="lang-th">จัดทำแบบ 2D/3D พร้อมตัวอย่าง</span></p>
+        </div>
+        <div class="step">
+          <div class="circle">3</div>
+          <h4><span class="lang-en">Produce &amp; Deliver</span><span class="lang-th">ผลิตและจัดส่ง</span></h4>
+          <p><span class="lang-en">Mass production with double quality control and delivery</span><span class="lang-th">ผลิตจริงพร้อมตรวจสอบสองรอบและจัดส่งถึงมือคุณ</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packaging Categories Section -->
+    <section class="packaging-categories" id="categories">
+      <h2><span class="lang-en">Packaging Categories</span><span class="lang-th">หมวดหมู่บรรจุภัณฑ์</span></h2>
+      <div class="categories-grid">
+        <div class="category-item">
+          <img src="cat-tubes.png" alt="Tubes category image">
+          <h3><span class="lang-en">Tubes</span><span class="lang-th">หลอด</span></h3>
+        </div>
+        <div class="category-item">
+          <img src="cat-droppers.png" alt="Dropper &amp; Containers category image">
+          <h3><span class="lang-en">Dropper &amp; Containers</span><span class="lang-th">ขวดดรอปเปอร์</span></h3>
+        </div>
+        <div class="category-item">
+          <img src="cat-pumps.png" alt="Pumps category image">
+          <h3><span class="lang-en">Pumps</span><span class="lang-th">ขวดหัวปั๊ม</span></h3>
+        </div>
+        <div class="category-item">
+          <img src="cat-pouches.png" alt="Pouches category image">
+          <h3><span class="lang-en">Pouches</span><span class="lang-th">ซอง</span></h3>
+        </div>
+        <div class="category-item">
+          <img src="cat-bottles.png" alt="Bottles category image">
+          <h3><span class="lang-en">Bottles</span><span class="lang-th">ขวด</span></h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section: Download catalogue, logo, tagline, and Get Started button -->
+    <section class="cta-section" id="cta">
+      <!-- Top download button -->
+      <div class="cta-download">
+        <!-- Top download button linking to the latest catalogue PDF -->
+        <a href="catalogue.pdf" class="download-btn" download>
+          <span class="lang-en">Download Catalogue</span>
+          <span class="lang-th">ดาวน์โหลดแคตตาล็อก</span>
+        </a>
+      </div>
+      <!-- Logo -->
+      <div class="cta-logo">
+        <!-- Use the full SoFresh Packaging logo in the CTA section -->
+        <img src="header-logo.png" alt="SoFresh Packaging Logo">
+      </div>
+      <!-- Tagline -->
+      <h3 class="cta-tagline">
+        <span class="lang-en">Let’s start your packaging journey with us!</span>
+        <span class="lang-th">มาเริ่มต้นการเดินทางบรรจุภัณฑ์ของคุณไปกับเรา!</span>
+      </h3>
+      <!-- Get started button -->
+      <div class="cta-buttons">
+        <a href="#" class="get-started-btn" data-modal-target="#contactForm" data-no-smooth>
+          <span class="lang-en">Get Started</span>
+          <span class="lang-th">เริ่มเลย</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact form is no longer displayed in its own section, but the modal remains available -->
+    <!-- Contact Form Modal moved outside the contact section so it can be triggered from anywhere -->
+    <div id="contactForm" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3><span class="lang-en">Inquiry Form</span><span class="lang-th">แบบฟอร์มติดต่อ</span></h3>
+        <form id="inquiryForm">
+          <!-- Name field -->
+          <input type="text" name="name" placeholder="ชื่อ Name" required>
+          <!-- Company / Brand field -->
+          <input type="text" name="company" placeholder="บริษัท / แบรนด์ Company name / Brand name" required>
+          <!-- Phone number field -->
+          <input type="tel" name="phone" placeholder="เบอร์โทรศัพท์ Phone Number" required>
+          <!-- Email address field -->
+          <input type="email" name="email" placeholder="อีเมล Email Address" required>
+          <!-- Details textarea -->
+          <textarea name="details" placeholder="รายละเอียด Details" required></textarea>
+          <!-- Product of interest field -->
+          <input type="text" name="product" placeholder="ผลิตภัณฑ์ที่จะบรรจุในบรรจุภัณฑ์ Product to fill into packaging" required>
+          <!-- Production quantity field -->
+          <input type="number" name="quantity" placeholder="จำนวนสั่งผลิต Production Quantity" min="1" required>
+          <!-- Expected price per piece field -->
+          <input type="number" name="expected_price" placeholder="ราคาที่คาดหวังต่อชิ้น Expected price per piece" min="0" step="0.01" required>
+          <!-- Consent notice with checkbox. The user must check this box to submit the form -->
+          <label class="consent">
+            <input type="checkbox" id="consent-checkbox" name="consent">
+            <!-- The consent message includes a link to open the privacy policy modal -->
+            <span class="lang-en">By submitting this form, I hereby give consent for SoFresh Packaging to collect and use my personal data for the purpose of contacting me, in accordance with the terms stated in the <a href="#" data-modal-target="#privacyModal" data-no-smooth>Privacy Policy</a>.</span>
+            <span class="lang-th">โดยการส่งข้อมูลนี้ ฉันยินยอมให้ SoFresh Packaging เก็บและใช้ข้อมูลส่วนบุคคลของฉันเพื่อวัตถุประสงค์ในการติดต่อกลับตามที่ระบุไว้ใน <a href="#" data-modal-target="#privacyModal" data-no-smooth>นโยบายความเป็นส่วนตัว</a></span>
+          </label>
+          <button type="submit"><span class="lang-en">Submit</span><span class="lang-th">ส่ง</span></button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <!-- Left side: QR code and contact details -->
+        <div class="footer-left">
+          <div class="footer-left-inner">
+            <img src="qr-code.png" alt="LINE OA QR Code" class="footer-qr">
+            <div class="contact-details">
+              <h3 class="contact-title"><span class="lang-en">Contact Us</span><span class="lang-th">ช่องทางติดต่อ</span></h3>
+              <p class="contact-item">
+                <img src="phone-icon.png" alt="Phone" class="contact-icon">
+                <a href="tel:+66955506665">(+66) 9&nbsp;5550&nbsp;6665</a>
+              </p>
+              <p class="contact-item">
+                <img src="email-icon.png" alt="Email" class="contact-icon">
+                <a href="mailto:hello@sofresh.site">hello@sofresh.site</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right side: SoFresh logo -->
+        <div class="footer-logo">
+          <img src="footer-logo.png" alt="SoFresh Packaging Logo">
+        </div>
+      </div>
+      <!-- Copyright and privacy information -->
+      <div class="footer-info">
+        <p class="copyright">Copyright &copy; 2025 SoFresh, All rights reserved.</p>
+        <a href="#" data-modal-target="#privacyModal" data-no-smooth class="privacy-link"><span class="lang-en">Privacy Policy</span><span class="lang-th">นโยบายความเป็นส่วนตัว</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content privacy-modal">
+      <span class="modal-close">&times;</span>
+      <div class="privacy-content">
+        <!-- Use the same bilingual privacy policy as before -->
+        <h2>นโยบายความเป็นส่วนตัว (Privacy Policy)</h2>
+        <p><strong>สำหรับเว็บไซต์ SoFresh Packaging<br>
+        ประกาศโดย: บริษัท ฮามามาส จำกัด (Hamamas Co., Ltd.)<br>
+        มีผลบังคับใช้ตั้งแต่วันที่ 5 July 2025</strong></p>
+        <p>บริษัท ฮามามาส จำกัด ("บริษัท" หรือ "เรา") ให้ความสำคัญต่อความเป็นส่วนตัวของผู้ใช้งานและตระหนักถึงความสำคัญของการคุ้มครองข้อมูลส่วนบุคคลตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (“PDPA”) นโยบายฉบับนี้จัดทำขึ้นเพื่อชี้แจงว่าเราเก็บ ใช้ และจัดการข้อมูลส่วนบุคคลอย่างไรเมื่อคุณใช้งานเว็บไซต์ของเรา</p>
+        <h3>1. ข้อมูลที่เราจัดเก็บ</h3>
+        <ul>
+          <li>ชื่อ-นามสกุล</li>
+          <li>เบอร์โทรศัพท์</li>
+          <li>อีเมล</li>
+          <li>ชื่อบริษัท</li>
+          <li>สินค้าที่สนใจ</li>
+          <li>จำนวนที่ต้องการสั่งผลิต</li>
+          <li>รายละเอียดเพิ่มเติมอื่น ๆ ที่คุณระบุในฟอร์ม</li>
+        </ul>
+        <p>เราไม่มีการเก็บ IP Address, ข้อมูลอุปกรณ์ หรือพิกัดโดยอัตโนมัติ</p>
+        <h3>2. วัตถุประสงค์ในการเก็บและใช้ข้อมูล</h3>
+        <ul>
+          <li>ติดต่อกลับเพื่อเสนอข้อมูลหรือบริการตามที่คุณสนใจ</li>
+          <li>ให้ทีมขายของเราสามารถให้คำปรึกษาและดูแลคุณอย่างเหมาะสม</li>
+          <li>ใช้เป็นข้อมูลภายในบริษัทเพื่อพัฒนาการให้บริการ</li>
+        </ul>
+        <p>เราไม่มีการแชร์ข้อมูลให้บุคคลที่สาม และไม่ใช้เพื่อการโฆษณาหรือทำการตลาดซ้ำ</p>
+        <h3>3. การจัดเก็บข้อมูล</h3>
+        <ul>
+          <li>ข้อมูลจะถูกจัดเก็บไว้ภายในระบบของบริษัท เป็นเวลาไม่เกิน 1 ปี</li>
+          <li>ไม่มีการสำรองข้อมูลในระบบ cloud หรือบุคคลที่สาม</li>
+          <li>มีมาตรการปกป้องข้อมูลในระดับที่เหมาะสมกับความเสี่ยง</li>
+        </ul>
+        <h3>4. สิทธิของเจ้าของข้อมูล</h3>
+        <ul>
+          <li>ขอเข้าถึง / ขอสำเนาข้อมูลของคุณ</li>
+          <li>ขอแก้ไขหากข้อมูลไม่ถูกต้อง</li>
+          <li>ขอให้ลบ หรือจำกัดการใช้ข้อมูลของคุณ</li>
+          <li>ถอนความยินยอมได้ทุกเมื่อ โดยไม่มีผลย้อนหลัง</li>
+        </ul>
+        <p>กรุณาส่งคำร้องผ่านอีเมลมาที่: info@sofresh.site เราจะดำเนินการภายใน 2 วันทำการ</p>
+        <h3>5. การเปลี่ยนแปลงนโยบาย</h3>
+        <p>บริษัทฯ อาจปรับปรุงนโยบายความเป็นส่วนตัวนี้ตามความจำเป็น โดยจะแจ้งให้ทราบผ่านทางหน้าเว็บไซต์</p>
+        <h3>ข้อมูลติดต่อ</h3>
+        <p>บริษัท ฮามามาส จำกัด (Hamamas Co., Ltd.)<br>
+        เลขที่ 2 ซอยบางแวก104 ถนนบางแวก แขวงคลองขวาง เขตภาษีเจริญ กรุงเทพมหานคร 10160<br>
+        โทร: 09-5550-6665<br>
+        อีเมล: info@sofresh.site</p>
+        <hr>
+        <h2>Privacy Policy (English)</h2>
+        <p><strong>For SoFresh Packaging Website<br>
+        Issued by: Hamamas Co., Ltd.<br>
+        Effective as of July 5, 2025</strong></p>
+        <h3>1. Introduction</h3>
+        <p>Hamamas Co., Ltd. ("Company", "we", "us") values your privacy and is committed to protecting your personal data in accordance with the Personal Data Protection Act B.E. 2562 (PDPA). This Privacy Policy outlines how we collect, use, and manage your data when you interact with our website.</p>
+        <h3>2. Data We Collect</h3>
+        <ul>
+          <li>Full name</li>
+          <li>Phone number</li>
+          <li>Email address</li>
+          <li>Company name</li>
+          <li>Product of interest</li>
+          <li>Quantity requested</li>
+          <li>Any additional details you choose to provide</li>
+        </ul>
+        <p>We do not collect IP addresses, device data, or location information.</p>
+        <h3>3. Purpose of Data Collection</h3>
+        <ul>
+          <li>To contact you with information about our services</li>
+          <li>To allow our sales team to consult with you based on your interest</li>
+          <li>To use internally for service improvement</li>
+        </ul>
+        <p>We do not share your data with third parties, nor do we use it for advertising or remarketing.</p>
+        <h3>4. Data Retention</h3>
+        <ul>
+          <li>Your data will be retained securely for no more than 1 year</li>
+          <li>No data is backed up externally or to third-party systems</li>
+          <li>We apply appropriate safeguards to ensure data protection</li>
+        </ul>
+        <h3>5. Your Rights</h3>
+        <ul>
+          <li>Access or request a copy of your personal data</li>
+          <li>Request correction of any inaccurate data</li>
+          <li>Request deletion or restriction of use</li>
+          <li>Withdraw your consent at any time (non-retroactively)</li>
+        </ul>
+        <p>To exercise your rights, please contact us at: info@sofresh.site We will respond within 2 business days</p>
+        <h3>6. Policy Updates</h3>
+        <p>We may update this Privacy Policy when necessary. Any updates will be posted on our website.</p>
+        <h3>Contact Information</h3>
+        <p>Hamamas Co., Ltd.<br>
+        2 Soi Bang Waek 104, Bang Waek Rd., Khlong Khwang Sub-district,<br>
+        Phasi Charoen District, Bangkok 10160<br>
+        Phone: 09-5550-6665<br>
+        Email: info@sofresh.site</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="custom_functions.js"></script>
+</body>
+</html>
