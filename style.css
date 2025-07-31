@@ -625,15 +625,23 @@ input:checked + .slider:before {
   display: inline-block;
 }
 @media (max-width: 768px) {
-  /* On small screens, keep all 5 items in a single row by using 5 equal columns */
+  /* Switch to horizontal scroll gallery on mobile */
   .categories-grid {
-    grid-template-columns: repeat(5, minmax(140px, 1fr));
+      display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .category-item {
+    flex: 0 0 auto;
+    width: 160px;
+    scroll-snap-align: center;
   }
 }
 @media (max-width: 480px) {
-  /* Keep 5 columns even on very small screens */
-  .categories-grid {
-    grid-template-columns: repeat(5, minmax(120px, 1fr));
+.category-item {
+    width: 140px;
   }
 }
 
@@ -838,9 +846,15 @@ footer {
 }
 @media (max-width: 768px) {
   .footer-main {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+  .footer-logo {
+    order: 1;
+  }
+  .footer-left {
+    order: 2;
   }
   .footer-left-inner {
     flex-direction: row;
@@ -848,7 +862,7 @@ footer {
   }
   .footer-info {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
