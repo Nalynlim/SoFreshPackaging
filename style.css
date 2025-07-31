@@ -204,30 +204,43 @@ input:checked + .slider:before {
   .order-btn {
     order: 2;
   }
-  /* Stack nav links vertically and hide by default */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: #efb4b4;
-    padding: 1rem 2rem;
-    gap: 1rem;
-    z-index: 1500;
+  /* Mobile drawer menu */
+  .nav-toggle {
+    position: relative;
+    z-index: 2002;
   }
-  /* When active, show the mobile nav */
-  .nav-links.active {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    gap: 1rem;
+    background-color: #efb4b4;
+    z-index: 2001;
+    transition: right 0.3s ease;
     display: flex;
   }
-  /* Align nav links to left on mobile */
+  .nav-links.active {
+    right: 0;
+  }
   .nav-links li {
     text-align: left;
   }
-  /* Remove margin-left on mobile */
   .nav-links {
     margin-left: 0;
+  }
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 2000;
+  }
+  .nav-overlay.active {
+    display: block;
   }
 }
 
