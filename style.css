@@ -191,9 +191,18 @@ input:checked + .slider:before {
 
 /* Responsive navigation menu */
 @media (max-width: 768px) {
-  /* Show the toggle button on small screens */
+  /* Show the toggle button on small screens and position it at the far right */
   .nav-toggle {
     display: block;
+        margin-left: auto;
+    order: 3;
+  }
+  /* Ensure language switcher and order button appear before the toggle */
+  .lang-toggle {
+    order: 1;
+  }
+  .order-btn {
+    order: 2;
   }
   /* Stack nav links vertically and hide by default */
   .nav-links {
