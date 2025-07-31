@@ -39,12 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const navMenu = document.getElementById('navmenu');
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', function () {
-      navMenu.classList.toggle('active');
+     const isOpen = navMenu.classList.toggle('active');
+     this.setAttribute('aria-expanded', isOpen);
     });
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 992) {
           navMenu.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', false);
         }
       });
     });
