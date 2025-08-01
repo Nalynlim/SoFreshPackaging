@@ -95,9 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    * Smooth scroll for anchor links
-   * This will intercept clicks on links starting with `#` and smoothly
-   * scroll to the referenced element. You can disable default anchor
-   * behaviour on specific links by adding the `data-no-smooth` attribute.
+   * Intercepts clicks on internal links (href starting with `#`) and
+   * scrolls smoothly to the target element. The built-in `scrollIntoView`
+   * method is used so CSS `scroll-margin-top` can handle any fixed header
+   * offset automatically.
+   * To skip smooth scrolling on a specific link, add the
+   * `data-no-smooth` attribute to that link.
    */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -106,9 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        const scrollMargin = parseInt(getComputedStyle(targetEl).scrollMarginTop) || 0;
-        const targetPos = targetEl.offsetTop - scrollMargin;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
