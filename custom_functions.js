@@ -42,11 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navToggle.addEventListener('click', function () {
       const isOpen = navMenu.classList.toggle('active');
       this.setAttribute('aria-expanded', isOpen);
-      const icon = this.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars', !isOpen);
-        icon.classList.toggle('fa-times', isOpen);
-      }
+      this.classList.toggle('open', isOpen);
       if (navOverlay) {
         navOverlay.classList.toggle('active', isOpen);
       }
@@ -56,11 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth <= 992) {
           navMenu.classList.remove('active');
           navToggle.setAttribute('aria-expanded', false);
-          const icon = navToggle.querySelector('i');
-          if (icon) {
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
-          }
+          navToggle.classList.remove('open');
           if (navOverlay) {
             navOverlay.classList.remove('active');
           }
@@ -71,11 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navOverlay.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.setAttribute('aria-expanded', false);
-        const icon = navToggle.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-times');
-        }
+        navToggle.classList.remove('open');
         navOverlay.classList.remove('active');
       });
     }
