@@ -184,9 +184,48 @@ input:checked + .slider:before {
   background: none;
   border: none;
   color: #6e4941;
-  font-size: 1.6rem;
   cursor: pointer;
+  width: 28px;
+  height: 24px;
   display: none;
+  position: relative;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle .hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+  bottom: -8px;
+}
+
+.nav-toggle.open .hamburger {
+  transform: scale(0);
+}
+
+.nav-toggle.open .hamburger::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.open .hamburger::after {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Responsive navigation menu */
