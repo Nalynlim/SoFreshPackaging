@@ -35,6 +35,13 @@ textarea::placeholder {
   font-family: var(--font-main);
 }
 
+/* Make media elements responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   /* Use LINE Seed Sans TH for both Thai and Latin characters */
   font-family: var(--font-main);
@@ -811,140 +818,111 @@ input:checked + .slider:before {
   background-color: var(--color-dark-pink-hover);
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-  /* Use light pink for the main footer background to align with the new CI */
   background-color: var(--color-light-pink);
-  padding: 2rem 1rem;
   color: var(--color-brown);
+  padding: 1rem;
 }
 
-/* Divider between logo and contact details in footer */
-/* Left and right sections in the footer */
-.footer-main {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: -webkit-box; display: -ms-flexbox; display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
 }
 
-/* Left side container for QR and contact details */
+.footer-left {
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  align-items: center;
+}
+
 .footer-left-inner {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-/* Style the QR code */
 .footer-qr {
-  width: 90px;
-  height: 90px;
-  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
 }
 
-/* Contact details styling */
 .contact-details {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  color: var(--color-cream);
+  gap: 0.25rem;
+  color: var(--color-brown);
 }
+
 .contact-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: var(--color-cream);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
+
 .contact-item {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 1rem;
-  color: var(--color-cream);
+  gap: 0.25rem;
+  font-size: 0.9rem;
 }
-/* Ensure contact links (phone/email) inherit the white colour and remove default link styling */
+
 .contact-item a {
   color: inherit;
   text-decoration: none;
 }
 
 .contact-icon {
-  width: 20px;
-  height: 20px;
-  /* Do not invert colours for contact icons because the footer now uses a light background */
+  width: 16px;
+  height: 16px;
   filter: none;
 }
 
-/* Footer logo on the right */
-.footer-logo img {
-  width: 140px;
-  height: auto;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.footer-main {
-  display: -webkit-box; display: -ms-flexbox; display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
 .footer-logo img {
   width: 120px;
   height: auto;
 }
-.footer-contact {
+
+.footer-info {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-}
-.footer-qr {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-/* Footer info line containing copyright and privacy link */
-.footer-info {
-   display: -webkit-box; display: -ms-flexbox; display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
+  gap: 0.25rem;
+  align-items: flex-end;
   font-size: 0.8rem;
-  color: var(--color-brown);
+  text-align: right;
 }
+
 .footer-info a {
   color: var(--color-brown);
   text-decoration: underline;
 }
+
 .footer-info a:hover {
   color: var(--color-dark-pink);
 }
+
 @media (max-width: 768px) {
-  .footer-main {
+  .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-  }
-  .footer-logo {
-    order: 1;
+    text-align: center;
   }
   .footer-left {
-    order: 2;
+    justify-content: center;
   }
-  .footer-left-inner {
-    flex-direction: row;
-    align-items: center;
+  .footer-qr {
+    width: 60px;
+    height: 60px;
   }
   .footer-info {
-    flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -1309,36 +1287,6 @@ section {
   margin: 1.5rem 0;
   border: none;
   border-top: 1px solid #ddd;
-}
-
-/* Footer */
-footer {
-  background-color: var(--color-pink-light);
-  color: var(--color-dark-brown);
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-
-.footer-container {
-  display: -webkit-box; display: -ms-flexbox; display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer-links {
-  display: -webkit-box; display: -ms-flexbox; display: flex;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: var(--color-dark-brown);
-  font-weight: 500;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
