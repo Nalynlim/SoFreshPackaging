@@ -568,9 +568,10 @@ input:checked + .slider:before {
 }
 .service-content ul {
   list-style: disc;
-  list-style-position: inside;
+  /* Ensure bullets align along the same left edge */
+  list-style-position: outside;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 1.2rem;
   color: var(--color-brown);
   line-height: 1.6;
 }
