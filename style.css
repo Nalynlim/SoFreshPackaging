@@ -567,10 +567,11 @@ input:checked + .slider:before {
 }
 .service-content ul {
   list-style: disc;
-  margin-left: 1rem;
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
   color: var(--color-brown);
   line-height: 1.6;
-  padding-left: 0;
 }
 .service-content ul li {
   margin-bottom: 0.4rem;
@@ -768,10 +769,14 @@ input:checked + .slider:before {
   max-width: 1200px;
   margin: 0 auto;
 }
+.cta-logo {
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cta-logo img {
   width: 200px;
   height: auto;
-  margin-bottom: 1rem;
 }
 
 /* Tagline below the CTA logo */
