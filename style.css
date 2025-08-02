@@ -531,6 +531,7 @@ input:checked + .slider:before {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
 }
 /* Stack all service items vertically by default so they appear one below another.
    This prevents them from forming a two‑column layout and instead aligns each
@@ -777,6 +778,8 @@ input:checked + .slider:before {
 .cta-logo img {
   width: 200px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Tagline below the CTA logo */
