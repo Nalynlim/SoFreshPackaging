@@ -1,3 +1,22 @@
+/* CSS variables */
+:root {
+  --color-line-green: #06c755;
+  --color-line-green-dark: #05b44e;
+  --color-brown-light: #6f4a42;
+  --color-dark-pink-hover: #d96c7c;
+  --color-pink-light: #f8cfcf;
+  --color-brown: #6e4941;
+  --color-cream: #f8f6ec;
+  --color-light-pink: #efb4b4;
+  --color-dark-pink: #ef7c8e;
+  --color-dark-brown: #56372a;
+  --font-main: "LINE Seed Sans TH", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Base styles */
 * {
   box-sizing: border-box;
@@ -7,22 +26,22 @@
 
 /* Ensure form elements inherit the LINE Seed Sans font */
 input, textarea, button, select {
-  font-family: 'LINE Seed Sans TH', sans-serif;
+  font-family: var(--font-main);
 }
 
 /* Ensure placeholders also use LINE Seed Sans */
 input::placeholder,
 textarea::placeholder {
-  font-family: 'LINE Seed Sans TH', sans-serif;
+  font-family: var(--font-main);
 }
 
 body {
   /* Use LINE Seed Sans TH for both Thai and Latin characters */
-  font-family: 'LINE Seed Sans TH', sans-serif;
+  font-family: var(--font-main);
   line-height: 1.6;
   /* CI cream background and primary text colour */
-  background-color: #f8f6ec;
-  color: #6e4941;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
 
   /* Add top padding equal to navbar height to prevent content from being hidden
      behind the fixed navigation bar. Adjust this value if you change navbar height. */
@@ -36,7 +55,7 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   /* CI light pink for header */
-  background-color: #efb4b4;
+  background-color: var(--color-light-pink);
   /* Always float at the top of the viewport */
   position: fixed;
   top: 0;
@@ -58,7 +77,7 @@ body {
 /* Language labels */
 .lang-label {
   font-weight: bold;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 /* Custom switch */
 .switch {
@@ -79,7 +98,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #efb4b4;
+  background-color: var(--color-light-pink);
   transition: 0.4s;
   border-radius: 20px;
 }
@@ -95,7 +114,7 @@ body {
   border-radius: 50%;
 }
 input:checked + .slider {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
 }
 input:checked + .slider:before {
   transform: translateX(18px);
@@ -109,7 +128,7 @@ input:checked + .slider:before {
   font-size: 1.5rem;
   font-weight: bold;
   /* Match the global brown colour for the logo text */
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Style the logo image to fit nicely within the navbar
@@ -145,7 +164,7 @@ input:checked + .slider:before {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   transition: width 0.3s ease;
 }
 .nav-links a:hover::after {
@@ -154,19 +173,19 @@ input:checked + .slider:before {
 
 .nav-links a {
   text-decoration: none;
-  color: #6e4941;
+  color: var(--color-brown);
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
   /* On hover, change nav text to cream to match the header background */
-  color: #f8f6ec;
+  color: var(--color-cream);
 }
 
 .order-btn {
   /* CI dark pink for primary button */
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 24px;
@@ -176,14 +195,14 @@ input:checked + .slider:before {
 }
 
 .order-btn:hover {
-  background-color: #d96c7c;
+  background-color: var(--color-dark-pink-hover);
 }
 
 /* Mobile navigation toggle (hamburger) */
 .nav-toggle {
   background: none;
   border: none;
-  color: #6e4941;
+  color: var(--color-brown);
   cursor: pointer;
   width: 28px;
   height: 24px;
@@ -257,7 +276,7 @@ input:checked + .slider:before {
     flex-direction: column;
     padding: 6rem 2rem 2rem;
     gap: 1rem;
-    background-color: #efb4b4;
+    background-color: var(--color-light-pink);
     z-index: 2001;
     transition: right 0.3s ease;
     display: -webkit-box; display: -ms-flexbox; display: flex;
@@ -286,7 +305,7 @@ input:checked + .slider:before {
 /* Hero section */
 .hero {
   /* Use the same cream colour as the body to blend seamlessly */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 4rem 1rem;
 }
 
@@ -309,13 +328,13 @@ input:checked + .slider:before {
   /* Large heading size for desktop hero to mirror design */
   font-size: 4rem;
   margin-bottom: 1rem;
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
   line-height: 1.1;
 }
 .hero-text p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Image column of hero */
@@ -348,7 +367,7 @@ input:checked + .slider:before {
 }
 
 .cta-btn {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   border: none;
   padding: 0.8rem 1.6rem;
@@ -366,7 +385,7 @@ input:checked + .slider:before {
 }
 
 .cta-btn:hover {
-  background-color: #d96c7c;
+  background-color: var(--color-dark-pink-hover);
 }
 
 /* About section */
@@ -376,7 +395,7 @@ input:checked + .slider:before {
 }
 .about h2 {
   margin-bottom: 1.5rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 /* Container for image and text within About section */
 .about-container {
@@ -409,7 +428,7 @@ input:checked + .slider:before {
 .about-text p {
   margin-bottom: 1rem;
   /* Use the same brown tone across the site */
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Responsive adjustments for About section */
@@ -434,7 +453,7 @@ input:checked + .slider:before {
 }
 .why h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .why-container {
@@ -468,12 +487,12 @@ input:checked + .slider:before {
 }
 .why-item h3 {
   font-size: 1.2rem;
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
   margin-bottom: 0.3rem;
 }
 .why-item p {
   font-size: 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
   margin-bottom: 0;
 }
 
@@ -497,7 +516,7 @@ input:checked + .slider:before {
 }
 .services h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 .services-container {
   display: -webkit-box; display: -ms-flexbox; display: flex;
@@ -531,18 +550,18 @@ input:checked + .slider:before {
 }
 .service-content h3 {
   font-size: 1.2rem;
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
   margin-bottom: 0.5rem;
 }
 .service-content h3 .small {
   font-weight: normal;
   font-size: 0.8rem;
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
 }
 .service-content ul {
   list-style: disc;
   margin-left: 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
   line-height: 1.6;
   padding-left: 0;
 }
@@ -561,8 +580,8 @@ input:checked + .slider:before {
   margin-bottom: 0.4rem;
   font-size: 0.8rem;
   line-height: 1.4;
-  color: #6e4941;
-  font-family: 'LINE Seed Sans TH', sans-serif;
+  color: var(--color-brown);
+  font-family: var(--font-main);
 }
 .consent input[type="checkbox"] {
   margin-top: 0.3rem;
@@ -587,11 +606,11 @@ input:checked + .slider:before {
 
 /* Style links inside the consent message to match the primary text colour */
 .consent a {
-  color: #6e4941;
+  color: var(--color-brown);
   text-decoration: underline;
 }
 .consent a:hover {
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
 }
 
 /* Center the submit button inside the modal form and add some vertical spacing */
@@ -645,7 +664,7 @@ input:checked + .slider:before {
 .intro {
   margin-top: -1rem;
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
   font-size: 1rem;
 }
 
@@ -656,7 +675,7 @@ input:checked + .slider:before {
 }
 .packaging-categories h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 .categories-grid {
   display: grid;
@@ -666,7 +685,7 @@ input:checked + .slider:before {
   margin: 0 auto;
 }
 .category-item {
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   border-radius: 16px;
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -682,7 +701,7 @@ input:checked + .slider:before {
 }
 .category-item h3 {
   font-size: 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 .category-item h3 span {
   display: inline-block;
@@ -725,7 +744,7 @@ input:checked + .slider:before {
 .cta-section {
   padding: 3rem 1rem;
   /* Same cream background as body */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   text-align: center;
 }
 
@@ -751,7 +770,7 @@ input:checked + .slider:before {
 /* Tagline below the CTA logo */
 .cta-tagline {
   font-size: 2.5rem;
-  color: #6e4941;
+  color: var(--color-brown);
   margin-bottom: 1rem;
 }
 .cta-buttons {
@@ -771,7 +790,7 @@ input:checked + .slider:before {
   display: inline-block;
 }
 .download-btn {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   padding: 0.8rem 2rem;
   border-radius: 32px;
@@ -780,24 +799,24 @@ input:checked + .slider:before {
   display: inline-block;
 }
 .download-btn:hover {
-  background-color: #d96c7c;
+  background-color: var(--color-dark-pink-hover);
 }
 .get-started-btn {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   /* Make Get Started button smaller than the primary CTA */
   padding: 0.6rem 1.6rem;
   font-size: 1rem;
 }
 .get-started-btn:hover {
-  background-color: #d96c7c;
+  background-color: var(--color-dark-pink-hover);
 }
 
 /* Footer styles */
 footer {
   /* Use light pink for the main footer background to align with the new CI */
-  background-color: #efb4b4;
+  background-color: var(--color-light-pink);
   padding: 2rem 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Divider between logo and contact details in footer */
@@ -829,12 +848,12 @@ footer {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  color: #f8f6ec;
+  color: var(--color-cream);
 }
 .contact-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #f8f6ec;
+  color: var(--color-cream);
   margin-bottom: 0.3rem;
 }
 .contact-item {
@@ -842,7 +861,7 @@ footer {
   align-items: center;
   gap: 0.4rem;
   font-size: 1rem;
-  color: #f8f6ec;
+  color: var(--color-cream);
 }
 /* Ensure contact links (phone/email) inherit the white colour and remove default link styling */
 .contact-item a {
@@ -898,14 +917,14 @@ footer {
   justify-content: space-between;
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 .footer-info a {
-  color: #6e4941;
+  color: var(--color-brown);
   text-decoration: underline;
 }
 .footer-info a:hover {
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
 }
 @media (max-width: 768px) {
   .footer-main {
@@ -937,7 +956,7 @@ footer {
 
 .categories h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .category-grid {
@@ -950,7 +969,7 @@ footer {
 .category {
   /* Soft pink box for category */
   /* Not used, but update to CI cream for consistency */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 1.5rem;
   border-radius: 12px;
   width: 180px;
@@ -966,25 +985,25 @@ footer {
 .icon-placeholder {
   font-size: 2.5rem;
   margin-bottom: 0.8rem;
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
 }
 
 .category h3 {
   font-size: 1.1rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Features section */
 .features {
   /* Replace unused pink backgrounds with light cream for consistency */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 3rem 1rem;
   text-align: center;
 }
 
 .features h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .feature-grid {
@@ -995,7 +1014,7 @@ footer {
 }
 
 .feature {
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 1.5rem;
   border-radius: 12px;
   width: 220px;
@@ -1004,18 +1023,18 @@ footer {
 }
 
 .feature i {
-  color: #ef7c8e;
+  color: var(--color-dark-pink);
   margin-bottom: 0.6rem;
 }
 
 .feature h3 {
   margin-bottom: 0.4rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .feature p {
   font-size: 0.95rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Process section */
@@ -1026,7 +1045,7 @@ footer {
 
 .process h2 {
   margin-bottom: 2rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .process-steps {
@@ -1038,7 +1057,7 @@ footer {
 
 .step {
   /* unify process card background to a very light pink */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 1.5rem;
   border-radius: 12px;
   width: 200px;
@@ -1051,7 +1070,7 @@ footer {
 }
 
 .circle {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   width: 40px;
   height: 40px;
@@ -1065,25 +1084,25 @@ footer {
 
 .step h4 {
   margin-bottom: 0.4rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .step p {
   font-size: 0.9rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 /* Contact section */
 .contact {
   /* light cream background for contact section */
-  background-color: #f8f6ec;
+  background-color: var(--color-cream);
   padding: 3rem 1rem;
   text-align: center;
 }
 
 .contact h2 {
   margin-bottom: 1.5rem;
-  color: #56372a;
+  color: var(--color-dark-brown);
 }
 
 .contact-details {
@@ -1094,7 +1113,7 @@ footer {
 }
 
 .line-button {
-  background-color: #06c755;
+  background-color: var(--color-line-green);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 24px;
@@ -1107,12 +1126,12 @@ footer {
 }
 
 .line-button:hover {
-  background-color: #05b44e;
+  background-color: var(--color-line-green-dark);
 }
 
 .contact button {
   /* Align contact button with new CI dark pink colour (unused section) */
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -1123,7 +1142,7 @@ footer {
 }
 
 .contact button:hover {
-  background-color: #d96c7c;
+  background-color: var(--color-dark-pink-hover);
 }
 
 
@@ -1161,7 +1180,7 @@ footer {
 
 .modal-content h3 {
   margin-bottom: 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .modal-content input,
@@ -1175,7 +1194,7 @@ footer {
 }
 
 .modal-content button {
-  background-color: #ef7c8e;
+  background-color: var(--color-dark-pink);
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -1192,7 +1211,7 @@ footer {
   float: right;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #6e4941;
+  color: var(--color-brown);
   z-index: 1;
 
 }
@@ -1207,20 +1226,20 @@ footer {
 .privacy-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .privacy-content h3 {
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .privacy-content p {
   font-size: 1rem;
   margin-bottom: 0.8rem;
-  color: #6e4941;
+  color: var(--color-brown);
   line-height: 1.5;
 }
 
@@ -1228,7 +1247,7 @@ footer {
   margin-left: 1.2rem;
   margin-bottom: 0.8rem;
   list-style-type: disc;
-  color: #6e4941;
+  color: var(--color-brown);
 }
 
 .privacy-content li {
@@ -1257,20 +1276,20 @@ section {
 .privacy-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #56372a;
+  color: var(--color-dark-brown);
 }
 
 .privacy-content h3 {
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #56372a;
+  color: var(--color-dark-brown);
 }
 
 .privacy-content p {
   font-size: 1rem;
   margin-bottom: 0.8rem;
-  color: #6f4a42;
+  color: var(--color-brown-light);
   line-height: 1.5;
 }
 
@@ -1278,7 +1297,7 @@ section {
   margin-left: 1.2rem;
   margin-bottom: 0.8rem;
   list-style-type: disc;
-  color: #6f4a42;
+  color: var(--color-brown-light);
 }
 
 .privacy-content li {
@@ -1294,8 +1313,8 @@ section {
 
 /* Footer */
 footer {
-  background-color: #f8cfcf;
-  color: #56372a;
+  background-color: var(--color-pink-light);
+  color: var(--color-dark-brown);
   padding: 1.5rem 1rem;
   text-align: center;
 }
@@ -1314,7 +1333,7 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: #56372a;
+  color: var(--color-dark-brown);
   font-weight: 500;
 }
 
@@ -1337,5 +1356,21 @@ footer {
   }
   .process-steps {
     gap: 3rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-brown);
+    color: var(--color-cream);
+  }
+  .navbar {
+    background-color: var(--color-dark-pink);
+  }
+  .nav-links a {
+    color: var(--color-cream);
+  }
+  .nav-links a:hover {
+    color: var(--color-light-pink);
   }
 }
