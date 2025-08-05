@@ -185,9 +185,11 @@ input:checked + .slider:before {
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  /* On hover, change nav text to cream to match the header background */
-  color: var(--color-cream);
+@media (min-width: 769px) {
+  .nav-links a:hover {
+    /* On hover, change nav text to cream to match the header background */
+    color: var(--color-cream);
+  }
 }
 
 .order-btn {
@@ -585,16 +587,16 @@ input:checked + .slider:before {
   align-items: flex-start;
   flex-wrap: wrap;
   /* Slight gap between checkbox and text */
-  gap: 0.25rem;
+  gap: 0.2rem;
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
   font-size: 0.8rem;
   line-height: 1.4;
   color: var(--color-brown);
   font-family: var(--font-main);
 }
 .consent input[type="checkbox"] {
-  margin-top: 0.3rem;
+  margin-top: 0.1rem;
 }
 /* Allow the bilingual consent text to break onto a new line */
 .consent span {
@@ -646,8 +648,8 @@ input:checked + .slider:before {
 
   /* Reduce modal size and padding on mobile for a more compact form */
   .modal-content {
-    width: 95%;
-    max-width: 90%;
+    width: 90%;
+    max-width: 400px;
     padding: 1rem;
     max-height: 90vh;
     overflow-y: auto;
@@ -665,8 +667,8 @@ input:checked + .slider:before {
   /* Compact consent text on mobile */
   .consent {
     font-size: 0.7rem;
-    gap: 0.2rem;
-    margin-bottom: 0.3rem;
+    gap: 0.15rem;
+    margin-bottom: 0.2rem;
   }
 }
 
@@ -689,7 +691,7 @@ input:checked + .slider:before {
 }
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -831,7 +833,7 @@ input:checked + .slider:before {
 footer {
   background-color: var(--color-light-pink);
   color: var(--color-brown);
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .footer-container {
@@ -842,7 +844,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-left {
@@ -866,13 +868,14 @@ footer {
   display: -webkit-box; display: -ms-flexbox; display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  color: var(--color-brown);
+  color: #fff;
 }
 
 .contact-title {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.2rem;
+  color: #fff;
 }
 
 .contact-item {
@@ -880,17 +883,18 @@ footer {
   align-items: center;
   gap: 0.25rem;
   font-size: 0.9rem;
+  color: #fff;
 }
 
-.contact-item a {
-  color: inherit;
-  text-decoration: none;
-}
+  .contact-item a {
+    color: inherit;
+    text-decoration: none;
+  }
 
 .contact-icon {
   width: 16px;
   height: 16px;
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 .footer-logo img {
@@ -918,20 +922,22 @@ footer {
 
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
   .footer-left {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .footer-qr {
     width: 60px;
     height: 60px;
   }
   .footer-info {
+    width: 100%;
     align-items: center;
     text-align: center;
+    margin-top: 0.5rem;
   }
 }
 
